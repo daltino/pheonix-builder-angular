@@ -1,3 +1,20 @@
-body{
+:host {
 	background-color:#039;
+}
+
+.grid-y {
+	background-color: #039;
+}
+
+.footer-brand-text {
+	color: white;
+}
+
+.inline-list {
+	list-style: none;
+	text-align: right;
+	& > li {
+		display: inline;
+		margin-right: 2rem;
+	}
 }
