@@ -1,7 +1,8 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
+import { CurrentUser } from './typings';
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class AuthService {
   public isLoggedIn: boolean;
@@ -9,11 +10,11 @@ export class AuthService {
 
   constructor() {}
 
-  login(userName: string, password: string) {}
+  login(userName: string, password: string) {
+    this.isLoggedIn = true;
+  }
 
-  logOut() {}
-}
-
-interface CurrentUser {
-  userName: string;
+  logOut() {
+    this.isLoggedIn = false;
+  }
 }
